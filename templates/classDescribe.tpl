@@ -9,9 +9,12 @@
     expect(<%=instanceVariableName %> instanceof <%=parsedSource.exportClass.name %>).toBeTruthy();
   });
 <% parsedSource.exportClass.methods.forEach(function(value) { %>
-  it('should have a <%=(value.isStatic ? 'static ' : '' )%>method <%=value.methodName %>()', <%if(value.isAsync){%>async <%}%>() => {
-    // <%if(value.isAsync){%>await <%}%><%=(value.isStatic?parsedSource.exportClass.name:instanceVariableName) %>.<%=value.methodName %>(<%=value.params %>);
-    expect(false).toBeTruthy();
-  });
+    describe('<%=value.methodName %>()', ()=>{
+        it('should have a <%=(value.isStatic ? 'static ' : '' )%>method <%=value.methodName %>()', <%if(value.isAsync){%>async <%}%>() => {
+            // <%if(value.isAsync){%>await <%}%><%=(value.isStatic?parsedSource.exportClass.name:instanceVariableName) %>.<%=value.methodName %>(<%=value.params %>);
+            expect(false).toBeTruthy();
+        });
+    })
+
 <% }) %>});
 <% } %>

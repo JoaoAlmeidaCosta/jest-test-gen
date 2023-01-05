@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.4.3
+- Templates now generate a describe wrapper for each method
+
 ## v1.4.2
 
 - #14 fix non arrow function assignement expression parsing Thanks @yiminghe

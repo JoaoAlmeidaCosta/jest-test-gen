@@ -1,5 +1,5 @@
-# JestTestGen
-![badgenpm](https://img.shields.io/npm/dm/jest-test-gen.svg) ![badgenpm](https://img.shields.io/npm/v/jest-test-gen.svg)
+# JestTestGen fork
+Same as parent repo but with describe method wrappers in templates
 
 ## 🚀 Try jest-test-gen as a VS Code Extension
 
